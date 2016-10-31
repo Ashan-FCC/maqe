@@ -12,6 +12,9 @@ Optional parameters are prefix and file location.
 
 <code> $generator->generateTokens();	</code>
 
+OR 
+You can run the index.php file on the command line which will run this code for you. 
+
 The generated tokens will be available at /storage/section2.txt
 
 <b>Note</b>
