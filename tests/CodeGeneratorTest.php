@@ -1,6 +1,6 @@
 <?php
 
-use App\CodeGenerator;
+use src\CodeGenerator;
 
 class CodeGeneratorTest extends PHPUnit_Framework_TestCase
 {
@@ -45,19 +45,5 @@ class CodeGeneratorTest extends PHPUnit_Framework_TestCase
         str_replace("\r\n", "", $line);
         return $line;
     }
-
-    // public static function tearDownAfterClass(){
-    //     try{
-    //         $file = __DIR__.'/../storage/section2.txt';
-    //         if(file_exists($file))
-    //         unlink($file);
-    //     }catch(Exception $ex){
-
-    //         echo $ex->getMessage();
-
-    //     }
-        
-
-    // }
 }
 ?>
