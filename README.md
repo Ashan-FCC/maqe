@@ -26,3 +26,4 @@ At the root folder of the project type this in the terminal.
 
 To view the buttons , open the file buttons.html on a browser.
 
+The project source is on https://github.com/Ashan-FCC/maqe.git
