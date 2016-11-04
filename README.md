@@ -1,14 +1,15 @@
 # maqe
 maqe backend
 
-1. Run composer to setup autoloading. 
+1. Run composer to setup autoloading. <br>
+
 <code> composer install </code>
 
-2. To generate the tokens,
+2. To generate the tokens, <br>
 
-create an instance of App\CodeGenerator
-The parameters that must be passed in are token length, number of tokens
-Optional parameters are prefix and file location.
+	create an instance of App\CodeGenerator
+	The parameters that must be passed in are token length, number of tokens
+	Optional parameters are prefix and file location.
 
 
 <code> $generator = new App\CodeGenerator(10, 250, 'MY'); </code>
