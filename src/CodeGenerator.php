@@ -1,5 +1,5 @@
 <?php
-namespace src;
+namespace App;
 
 class CodeGenerator {
     private $tokenLength;
@@ -15,7 +15,7 @@ class CodeGenerator {
     }
 
     public function generateTokens(){
-    $couponFile = $this->file === "" ? __DIR__."\\..\\storage\\section2.txt" : $this->file;
+    $couponFile = $this->file === "" ? __DIR__."/../storage/section2.txt" : $this->file;
     $fp = fopen($couponFile,"wb");
     $tokenLength = $this->tokenLength - strlen($this->prefix);
         if($fp!== false){
@@ -39,12 +39,12 @@ class CodeGenerator {
         $max = strlen($codeAlphabet); // edited
 
         for ($i=0; $i < $length; $i++) {
-            $token .= $codeAlphabet[$this->crypto_rand_secure(0, $max)];
+            $token .= $codeAlphabet[$this->cryptoRandSecure(0, $max)];
         }
 
         return $token;
     }
-    private function crypto_rand_secure($min, $max)
+    private function cryptoRandSecure($min, $max)
     {
         $range = $max - $min;
         if ($range < 1) return $min; // not so random...

@@ -2,11 +2,11 @@
 
 require 'vendor/autoload.php';
 
-use src\CodeGenerator;
+use App\CodeGenerator;
 
 $generator = new CodeGenerator(10, 250, "MY");
 $generator->generateTokens();
 
-echo "Finished";
+echo "Finished\n";
 
 ?>

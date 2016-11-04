@@ -1,6 +1,6 @@
 <?php
 
-use src\CodeGenerator;
+use App\CodeGenerator;
 
 class CodeGeneratorTest extends PHPUnit_Framework_TestCase
 {
@@ -8,6 +8,7 @@ class CodeGeneratorTest extends PHPUnit_Framework_TestCase
     public function setUp(){
         $this->generator = new CodeGenerator(10, 250, $prefix="MY", $file="");
     }
+
     /** @test */
     public function create_code_with_10_characters()
     {
@@ -16,6 +17,7 @@ class CodeGeneratorTest extends PHPUnit_Framework_TestCase
 
         $this->assertTrue(strlen($token) == 10);
     }
+
     /** @test */
     public function create_all_codes_at_default_location(){
 
@@ -30,20 +32,12 @@ class CodeGeneratorTest extends PHPUnit_Framework_TestCase
             $line = fgets($codes);
             if($line !== false)
             $count++;
-
-
         }
         fclose($codes);
         $this->assertEquals(250 , $count);
 
 
 
-    }
-    private function removeLineBreaks($line){
-        str_replace("", "", $line);
-        str_replace("\n", "", $line);
-        str_replace("\r\n", "", $line);
-        return $line;
     }
 }
 ?>
